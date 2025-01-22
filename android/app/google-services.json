@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "615415147244",
+    "project_id": "semiotic-abbey-368114",
+    "storage_bucket": "semiotic-abbey-368114.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615415147244:android:ecf6fade4aa52c296f13c9",
+        "android_client_info": {
+          "package_name": "com.tas.Esmv_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKAnUKXzB011x3X6zSlPc5DwenH7CdbsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
