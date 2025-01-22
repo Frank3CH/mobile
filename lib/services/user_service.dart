@@ -1,7 +1,7 @@
-import 'package:ESMV_STORE/utils/MLString.dart';
+import 'package:esmv_store/utils/MLString.dart';
 import 'package:dio/dio.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/model/MLUserProfile.dart';
+import 'package:esmv_store/model/MLUserProfile.dart';
 
 class UserService {
   final Dio _dio = Dio(BaseOptions(

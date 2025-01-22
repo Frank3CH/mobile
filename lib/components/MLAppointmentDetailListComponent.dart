@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/main.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/model/MLAppointmentData.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLDataProvider.dart';
-import 'package:ESMV_STORE/utils/MLString.dart';
+import 'package:esmv_store/model/MLAppointmentData.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLDataProvider.dart';
+import 'package:esmv_store/utils/MLString.dart';
 
 class MLAppointmentDetailListComponent extends StatefulWidget {
   static String tag = '/MLAppointmentDetailListComponent';

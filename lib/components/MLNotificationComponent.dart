@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/main.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/model/MLNotificationData.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/services/notification_service.dart';
+import 'package:esmv_store/model/MLNotificationData.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/services/notification_service.dart';
 
 class MLNotificationComponent extends StatefulWidget {
   static String tag = '/MLNotificationComponent';

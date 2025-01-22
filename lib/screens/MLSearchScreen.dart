@@ -1,12 +1,12 @@
-import 'package:ESMV_STORE/screens/MLProductDetailScreen.dart';
+import 'package:esmv_store/screens/MLProductDetailScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:provider/provider.dart';
-import 'package:ESMV_STORE/model/product.dart';
-import 'package:ESMV_STORE/providers/product_provider.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLCommon.dart';
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/model/product.dart';
+import 'package:esmv_store/providers/product_provider.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLCommon.dart';
+import 'package:esmv_store/main.dart';
 
 class MLSearchScreen extends StatefulWidget {
   static String tag = '/MLSearchScreen';

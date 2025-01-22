@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/main.dart';
-import 'package:ESMV_STORE/model/MLOrderSuccessData.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
+import 'package:esmv_store/main.dart';
+import 'package:esmv_store/model/MLOrderSuccessData.dart';
+import 'package:esmv_store/utils/MLColors.dart';
 
 class MLOrderSuccessComponent extends StatelessWidget {
   final List<MLOrderSuccessData> orderDetails;

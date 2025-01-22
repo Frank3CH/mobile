@@ -1,7 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLColors.dart';
 
 class MLCountryPickerComponent extends StatefulWidget {
   static String tag = '/MLCountryPickerComponent';

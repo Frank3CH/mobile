@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/utils/MLCommon.dart';
+import 'package:esmv_store/utils/MLCommon.dart';
 
 class MLBottomNavigationBarWidget extends StatefulWidget {
   static String tag = '/MLBottomNavigationBarWidget';

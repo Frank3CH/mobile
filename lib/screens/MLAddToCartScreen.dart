@@ -1,13 +1,13 @@
-import 'package:ESMV_STORE/screens/MLSearchScreen.dart';
+import 'package:esmv_store/screens/MLSearchScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:provider/provider.dart';
-import 'package:ESMV_STORE/components/MLCheckOutComponent.dart';
-import 'package:ESMV_STORE/components/MLShoppingCartComponent.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/main.dart';
-import 'package:ESMV_STORE/providers/cart_provider.dart';
-import 'package:ESMV_STORE/services/order_service.dart';
+import 'package:esmv_store/components/MLCheckOutComponent.dart';
+import 'package:esmv_store/components/MLShoppingCartComponent.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/main.dart';
+import 'package:esmv_store/providers/cart_provider.dart';
+import 'package:esmv_store/services/order_service.dart';
 
 import 'MLConfirmOrderScreen.dart';
 

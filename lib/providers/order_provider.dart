@@ -1,7 +1,7 @@
-import 'package:ESMV_STORE/model/Commande.dart';
-import 'package:ESMV_STORE/model/Facture.dart';
+import 'package:esmv_store/model/Commande.dart';
+import 'package:esmv_store/model/Facture.dart';
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/services/order_service.dart';
+import 'package:esmv_store/services/order_service.dart';
 
 class OrderProvider with ChangeNotifier {
   final OrderService _orderService = OrderService();

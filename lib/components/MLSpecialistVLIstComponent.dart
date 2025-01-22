@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/main.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/model/MLSpecialistData.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLDataProvider.dart';
+import 'package:esmv_store/model/MLSpecialistData.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLDataProvider.dart';
 
 class MLSpecialistVListComponent extends StatefulWidget {
   static String tag = '/MLSpecialistVListComponent';

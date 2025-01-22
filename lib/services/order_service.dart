@@ -1,10 +1,10 @@
-import 'package:ESMV_STORE/model/Facture.dart';
-import 'package:ESMV_STORE/model/MLUserProfile.dart';
-import 'package:ESMV_STORE/services/user_service.dart';
-import 'package:ESMV_STORE/utils/MLString.dart';
+import 'package:esmv_store/model/Facture.dart';
+import 'package:esmv_store/model/MLUserProfile.dart';
+import 'package:esmv_store/services/user_service.dart';
+import 'package:esmv_store/utils/MLString.dart';
 import 'package:dio/dio.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/model/Commande.dart';
+import 'package:esmv_store/model/Commande.dart';
 
 class OrderService {
   final Dio _dio = Dio(BaseOptions(

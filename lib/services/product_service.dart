@@ -1,7 +1,7 @@
-import 'package:ESMV_STORE/model/category.dart';
+import 'package:esmv_store/model/category.dart';
 import 'package:dio/dio.dart';
-import 'package:ESMV_STORE/model/product.dart';
-import 'package:ESMV_STORE/utils/MLString.dart';
+import 'package:esmv_store/model/product.dart';
+import 'package:esmv_store/utils/MLString.dart';
 
 class ProductService {
   final Dio _dio = Dio();

@@ -1,5 +1,5 @@
-import 'package:ESMV_STORE/components/MLHomeTopComponent.dart';
-import 'package:ESMV_STORE/components/MlAdminHomeBottomComponent.dart';
+import 'package:esmv_store/components/MLHomeTopComponent.dart';
+import 'package:esmv_store/components/MlAdminHomeBottomComponent.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 

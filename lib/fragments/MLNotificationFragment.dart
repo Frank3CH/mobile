@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/components/MLNotificationComponent.dart';
-import 'package:ESMV_STORE/model/MLNotificationData.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLString.dart';
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/components/MLNotificationComponent.dart';
+import 'package:esmv_store/model/MLNotificationData.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLString.dart';
+import 'package:esmv_store/main.dart';
 
 class MLNotificationFragment extends StatefulWidget {
   static String tag = '/MLNotificationFragment';

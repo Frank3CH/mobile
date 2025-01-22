@@ -1,4 +1,4 @@
-package com.tas.Esmv_store
+package com.tas.esmv_store
 
 import io.flutter.embedding.android.FlutterActivity
 

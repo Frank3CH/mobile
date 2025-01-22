@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/main.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLColors.dart';
 
 Widget mlBackToPrevious(BuildContext context, Color color) {
   return Align(

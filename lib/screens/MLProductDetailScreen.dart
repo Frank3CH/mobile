@@ -1,12 +1,12 @@
-import 'package:ESMV_STORE/providers/cart_provider.dart';
+import 'package:esmv_store/providers/cart_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/components/MLProductDetailComponent.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLCommon.dart';
-import 'package:ESMV_STORE/utils/MLImage.dart';
+import 'package:esmv_store/components/MLProductDetailComponent.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLCommon.dart';
+import 'package:esmv_store/utils/MLImage.dart';
 import 'package:provider/provider.dart';
-import 'package:ESMV_STORE/providers/product_provider.dart';
+import 'package:esmv_store/providers/product_provider.dart';
 
 class MLProductDetailScreen extends StatefulWidget {
   final int productId;

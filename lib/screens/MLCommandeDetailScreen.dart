@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLCommon.dart';
-import 'package:ESMV_STORE/main.dart';
-import 'package:ESMV_STORE/components/MLCommandeDetailList.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLCommon.dart';
+import 'package:esmv_store/main.dart';
+import 'package:esmv_store/components/MLCommandeDetailList.dart';
 import 'package:provider/provider.dart';
-import 'package:ESMV_STORE/providers/order_provider.dart';
+import 'package:esmv_store/providers/order_provider.dart';
 
 class MLCommandeDetailScreen extends StatefulWidget {
   static String tag = '/MLCommandeDetailScreen';

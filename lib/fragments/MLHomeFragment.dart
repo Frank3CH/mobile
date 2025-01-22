@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/components/MLHomeTopComponent.dart';
+import 'package:esmv_store/components/MLHomeTopComponent.dart';
 
-import 'package:ESMV_STORE/components/MLPharmacyCategoriesComponent.dart';
+import 'package:esmv_store/components/MLPharmacyCategoriesComponent.dart';
 
 class MLHomeFragment extends StatefulWidget {
   static String tag = '/MLHomeFragment';

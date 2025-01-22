@@ -1,10 +1,10 @@
-import 'package:ESMV_STORE/model/Commande.dart';
+import 'package:esmv_store/model/Commande.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/components/MLOrderTrackingComponent.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLCommon.dart';
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/components/MLOrderTrackingComponent.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLCommon.dart';
+import 'package:esmv_store/main.dart';
 
 class MLOrderDetailScreen extends StatefulWidget {
   static String tag = '/MLOrderDetailScreen';

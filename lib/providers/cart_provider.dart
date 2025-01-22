@@ -1,5 +1,5 @@
-import 'package:ESMV_STORE/model/cart.dart';
-import 'package:ESMV_STORE/model/product.dart';
+import 'package:esmv_store/model/cart.dart';
+import 'package:esmv_store/model/product.dart';
 import 'package:flutter/material.dart';
 
 class CartProvider with ChangeNotifier {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/main.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/components/MLPharmacyProductComponent.dart';
+import 'package:esmv_store/components/MLPharmacyProductComponent.dart';
 
 class MLCategoryComponent extends StatefulWidget {
   static String tag = '/MLCategoryComponent';

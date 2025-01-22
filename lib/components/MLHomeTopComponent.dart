@@ -1,14 +1,14 @@
-import 'package:ESMV_STORE/screens/MLSearchScreen.dart';
+import 'package:esmv_store/screens/MLSearchScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/model/MLServiceData.dart';
-import 'package:ESMV_STORE/screens/MLAddToCartScreen.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLDataProvider.dart';
-import 'package:ESMV_STORE/utils/MLImage.dart';
+import 'package:esmv_store/model/MLServiceData.dart';
+import 'package:esmv_store/screens/MLAddToCartScreen.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLDataProvider.dart';
+import 'package:esmv_store/utils/MLImage.dart';
 import 'package:provider/provider.dart';
-import 'package:ESMV_STORE/providers/cart_provider.dart';
-import 'package:ESMV_STORE/services/user_service.dart';
+import 'package:esmv_store/providers/cart_provider.dart';
+import 'package:esmv_store/services/user_service.dart';
 
 class MLHomeTopComponent extends StatefulWidget {
   static String tag = '/MLHomeTopComponent';

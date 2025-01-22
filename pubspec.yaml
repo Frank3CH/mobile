@@ -1,5 +1,5 @@
-name: ESMV_STORE
-description: A new Flutter project.
+name: esmv_store
+description: application de commande pour esmv_store
 version: 1.0.0
 
 environment:

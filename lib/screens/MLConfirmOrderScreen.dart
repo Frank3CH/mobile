@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLColors.dart';
 import 'MLDashboardScreen.dart';
-import 'package:ESMV_STORE/components/MLOrderSuccessComponent.dart';
-import 'package:ESMV_STORE/model/MLOrderSuccessData.dart';
+import 'package:esmv_store/components/MLOrderSuccessComponent.dart';
+import 'package:esmv_store/model/MLOrderSuccessData.dart';
 
 class MLConfirmOrderScreen extends StatelessWidget {
   final Map<String, dynamic> order;

@@ -1,4 +1,4 @@
-import 'package:ESMV_STORE/utils/MLImage.dart';
+import 'package:esmv_store/utils/MLImage.dart';
 
 class MLNotificationData {
   String image;

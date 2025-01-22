@@ -1,13 +1,13 @@
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/main.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:provider/provider.dart';
-import 'package:ESMV_STORE/utils/MLCommon.dart';
-import 'package:ESMV_STORE/screens/MLForgetPasswordScreen.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLImage.dart';
-import 'package:ESMV_STORE/utils/MLString.dart';
-import 'package:ESMV_STORE/providers/auth_provider.dart';
+import 'package:esmv_store/utils/MLCommon.dart';
+import 'package:esmv_store/screens/MLForgetPasswordScreen.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLImage.dart';
+import 'package:esmv_store/utils/MLString.dart';
+import 'package:esmv_store/providers/auth_provider.dart';
 
 class MLLoginScreen extends StatefulWidget {
   static String tag = '/MLLoginScreen';

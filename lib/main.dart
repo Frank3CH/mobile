@@ -1,18 +1,18 @@
-import 'package:ESMV_STORE/providers/cart_provider.dart';
-import 'package:ESMV_STORE/providers/order_provider.dart';
+import 'package:esmv_store/providers/cart_provider.dart';
+import 'package:esmv_store/providers/order_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:ESMV_STORE/screens/MLSplashScreen.dart';
-import 'package:ESMV_STORE/screens/MLLoginScreen.dart';
-import 'package:ESMV_STORE/screens/MLDashboardScreen.dart';
-import 'package:ESMV_STORE/store/AppStore.dart';
-import 'package:ESMV_STORE/utils/AppTheme.dart';
-import 'package:ESMV_STORE/utils/MLDataProvider.dart';
+import 'package:esmv_store/screens/MLSplashScreen.dart';
+import 'package:esmv_store/screens/MLLoginScreen.dart';
+import 'package:esmv_store/screens/MLDashboardScreen.dart';
+import 'package:esmv_store/store/AppStore.dart';
+import 'package:esmv_store/utils/AppTheme.dart';
+import 'package:esmv_store/utils/MLDataProvider.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
-import 'package:ESMV_STORE/providers/auth_provider.dart';
-import 'package:ESMV_STORE/providers/product_provider.dart';
+import 'package:esmv_store/providers/auth_provider.dart';
+import 'package:esmv_store/providers/product_provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 AppStore appStore = AppStore();

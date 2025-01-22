@@ -1,10 +1,10 @@
-import 'package:ESMV_STORE/providers/auth_provider.dart';
-import 'package:ESMV_STORE/screens/TransactionHistoryScreen.dart';
-import 'package:ESMV_STORE/utils/MLImage.dart';
+import 'package:esmv_store/providers/auth_provider.dart';
+import 'package:esmv_store/screens/TransactionHistoryScreen.dart';
+import 'package:esmv_store/utils/MLImage.dart';
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/main.dart';
-import 'package:ESMV_STORE/model/MLProfileCardData.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
+import 'package:esmv_store/main.dart';
+import 'package:esmv_store/model/MLProfileCardData.dart';
+import 'package:esmv_store/utils/MLColors.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:provider/provider.dart';
 

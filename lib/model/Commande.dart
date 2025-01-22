@@ -1,4 +1,4 @@
-import 'package:ESMV_STORE/model/product.dart';
+import 'package:esmv_store/model/product.dart';
 
 class Commande {
   int id;

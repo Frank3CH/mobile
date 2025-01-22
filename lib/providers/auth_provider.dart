@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/services/auth_service.dart';
-import 'package:ESMV_STORE/services/user_service.dart';
-import 'package:ESMV_STORE/screens/MLDashboardScreen.dart';
-import 'package:ESMV_STORE/model/MLUserProfile.dart';
+import 'package:esmv_store/services/auth_service.dart';
+import 'package:esmv_store/services/user_service.dart';
+import 'package:esmv_store/screens/MLDashboardScreen.dart';
+import 'package:esmv_store/model/MLUserProfile.dart';
 
 class AuthProvider with ChangeNotifier {
   final AuthService _authService = AuthService();

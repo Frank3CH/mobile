@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/main.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class MLProductDetailComponent extends StatelessWidget {

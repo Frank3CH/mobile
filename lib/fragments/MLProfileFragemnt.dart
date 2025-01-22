@@ -1,10 +1,10 @@
-import 'package:ESMV_STORE/model/MLUserProfile.dart';
-import 'package:ESMV_STORE/services/user_service.dart';
+import 'package:esmv_store/model/MLUserProfile.dart';
+import 'package:esmv_store/services/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/components/MLProfileBottomComponent.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLImage.dart';
+import 'package:esmv_store/components/MLProfileBottomComponent.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLImage.dart';
 
 class MLProfileFragment extends StatefulWidget {
   static String tag = '/MLProfileFragment';

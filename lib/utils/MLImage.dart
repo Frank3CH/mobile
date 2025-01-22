@@ -1,4 +1,4 @@
-import 'package:ESMV_STORE/utils/MLString.dart';
+import 'package:esmv_store/utils/MLString.dart';
 
 const String? ml_ic_medilab_logo = 'images/logo.png';
 const String? ml_ic_esmv_logo = 'images/logo_esmv.png';

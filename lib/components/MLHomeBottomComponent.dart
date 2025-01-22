@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/utils/MLCommon.dart';
+import 'package:esmv_store/utils/MLCommon.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/model/MLDepartmentData.dart';
-import 'package:ESMV_STORE/model/MLTopHospitalData.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLDataProvider.dart';
-import 'package:ESMV_STORE/utils/MLString.dart';
+import 'package:esmv_store/model/MLDepartmentData.dart';
+import 'package:esmv_store/model/MLTopHospitalData.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLDataProvider.dart';
+import 'package:esmv_store/utils/MLString.dart';
 
 class MLHomeBottomComponent extends StatefulWidget {
   static String tag = '/MLHomeBottomComponent';

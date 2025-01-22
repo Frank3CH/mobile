@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/model/MLInboxData.dart';
-import 'package:ESMV_STORE/utils/MLString.dart';
+import 'package:esmv_store/model/MLInboxData.dart';
+import 'package:esmv_store/utils/MLString.dart';
 
 class MLSymptomsDiscriptionComponent extends StatefulWidget {
   static String tag = '/MLSymptomsDiscriptionComponent';

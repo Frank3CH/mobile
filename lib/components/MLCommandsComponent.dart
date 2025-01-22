@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/screens/MLCommandeDetailScreen.dart';
+import 'package:esmv_store/screens/MLCommandeDetailScreen.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class MLCommandsComponent extends StatelessWidget {

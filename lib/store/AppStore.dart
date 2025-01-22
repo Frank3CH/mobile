@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLColors.dart';
 import 'package:mobx/mobx.dart';
 import 'package:nb_utils/nb_utils.dart';
 

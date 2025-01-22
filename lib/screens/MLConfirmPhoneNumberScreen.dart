@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/components/MLCountryPIckerComponent.dart';
-import 'package:ESMV_STORE/screens/MLUpdateProfileScreen.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLCommon.dart';
-import 'package:ESMV_STORE/utils/MLImage.dart';
-import 'package:ESMV_STORE/utils/MLString.dart';
-import 'package:ESMV_STORE/main.dart';
+import 'package:esmv_store/components/MLCountryPIckerComponent.dart';
+import 'package:esmv_store/screens/MLUpdateProfileScreen.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLCommon.dart';
+import 'package:esmv_store/utils/MLImage.dart';
+import 'package:esmv_store/utils/MLString.dart';
+import 'package:esmv_store/main.dart';
 
 class MLConfirmPhoneNumberScreen extends StatefulWidget {
   static String tag = '/MLConfirmPhoneNumberScreen';

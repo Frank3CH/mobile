@@ -1,10 +1,10 @@
-import 'package:ESMV_STORE/main.dart';
-import 'package:ESMV_STORE/screens/MLUserCommandsScreen.dart';
-import 'package:ESMV_STORE/utils/MLImage.dart';
+import 'package:esmv_store/main.dart';
+import 'package:esmv_store/screens/MLUserCommandsScreen.dart';
+import 'package:esmv_store/utils/MLImage.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/screens/MLOnlinePharmacyDetailScreen.dart';
-import 'package:ESMV_STORE/screens/TransactionHistoryScreen.dart';
+import 'package:esmv_store/screens/MLOnlinePharmacyDetailScreen.dart';
+import 'package:esmv_store/screens/TransactionHistoryScreen.dart';
 
 class MLPharmacyCategoriesComponent extends StatefulWidget {
   static String tag = '/MLPharmacyCategoriesComponent';

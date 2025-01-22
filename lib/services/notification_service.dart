@@ -1,5 +1,5 @@
-import 'package:ESMV_STORE/model/MLNotificationData.dart';
-import 'package:ESMV_STORE/utils/MLString.dart';
+import 'package:esmv_store/model/MLNotificationData.dart';
+import 'package:esmv_store/utils/MLString.dart';
 import 'package:dio/dio.dart';
 import 'package:nb_utils/nb_utils.dart';
 

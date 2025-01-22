@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:ESMV_STORE/screens/MLLoginScreen.dart';
-import 'package:ESMV_STORE/utils/MLImage.dart';
+import 'package:esmv_store/screens/MLLoginScreen.dart';
+import 'package:esmv_store/utils/MLImage.dart';
 
 class MLSplashScreen extends StatefulWidget {
   @override

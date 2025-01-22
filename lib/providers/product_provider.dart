@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/services/product_service.dart';
-import 'package:ESMV_STORE/model/product.dart';
-import 'package:ESMV_STORE/model/category.dart';
+import 'package:esmv_store/services/product_service.dart';
+import 'package:esmv_store/model/product.dart';
+import 'package:esmv_store/model/category.dart';
 
 class ProductProvider with ChangeNotifier {
   final ProductService _productService = ProductService();

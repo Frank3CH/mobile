@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ESMV_STORE/components/MLBottomNavigationBarWidget.dart';
-import 'package:ESMV_STORE/fragments/MLCommandeFragment.dart';
-import 'package:ESMV_STORE/fragments/MLHomeFragment.dart';
-import 'package:ESMV_STORE/fragments/MLNotificationFragment.dart';
-import 'package:ESMV_STORE/fragments/MLProfileFragemnt.dart';
-import 'package:ESMV_STORE/fragments/MLAdminHomeFragment.dart';
-import 'package:ESMV_STORE/utils/MLColors.dart';
-import 'package:ESMV_STORE/utils/MLCommon.dart';
+import 'package:esmv_store/components/MLBottomNavigationBarWidget.dart';
+import 'package:esmv_store/fragments/MLCommandeFragment.dart';
+import 'package:esmv_store/fragments/MLHomeFragment.dart';
+import 'package:esmv_store/fragments/MLNotificationFragment.dart';
+import 'package:esmv_store/fragments/MLProfileFragemnt.dart';
+import 'package:esmv_store/fragments/MLAdminHomeFragment.dart';
+import 'package:esmv_store/utils/MLColors.dart';
+import 'package:esmv_store/utils/MLCommon.dart';
 
 class MLDashboardScreen extends StatefulWidget {
   static String tag = '/MLDashboardScreen';
