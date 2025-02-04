@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:esmv_store/utils/MLColors.dart';
@@ -46,7 +47,7 @@ class MLCommandeDetailScreenState extends State<MLCommandeDetailScreen> {
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Erreur lors de la validation de la commande')),
+        SnackBar(content: Text('${AppLocalizations.of(context)!.validatefailed}')),
       );
     }
   }
@@ -57,7 +58,7 @@ class MLCommandeDetailScreenState extends State<MLCommandeDetailScreen> {
       Navigator.pop(context);
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Erreur lors du rejet de la commande')),
+        SnackBar(content: Text('${AppLocalizations.of(context)!.rejectfailed}')),
       );
     }
   }
@@ -82,7 +83,7 @@ class MLCommandeDetailScreenState extends State<MLCommandeDetailScreen> {
                       appStore.isDarkModeOn ? white : blackColor
                   ),
                   8.width,
-                  Text('Commande', style: boldTextStyle(size: 22)),
+                  Text('${AppLocalizations.of(context)!.order}', style: boldTextStyle(size: 22)),
                 ],
               ).paddingAll(16),
               Consumer<OrderProvider>(
@@ -93,7 +94,7 @@ class MLCommandeDetailScreenState extends State<MLCommandeDetailScreen> {
 
                   final orderDetails = provider.orderDetails;
                   if (orderDetails == null) {
-                    return Text('Aucune commande trouvée').center();
+                    return Text('${AppLocalizations.of(context)!.noorderfound}').center();
                   }
 
                   return Expanded(
@@ -115,7 +116,7 @@ class MLCommandeDetailScreenState extends State<MLCommandeDetailScreen> {
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.green,
                                     ),
-                                    child: Text('Accepter',
+                                    child: Text('${AppLocalizations.of(context)!.accept}',
                                         style:primaryTextStyle(color: Colors.white, size: 16)),
                                   ),
                                 ),
@@ -126,7 +127,7 @@ class MLCommandeDetailScreenState extends State<MLCommandeDetailScreen> {
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.red,
                                     ),
-                                    child: Text('Rejeter',
+                                    child: Text('${AppLocalizations.of(context)!.reject}',
                                         style:primaryTextStyle(color: Colors.white, size: 16)),
                                   ),
                                 ),
@@ -139,7 +140,7 @@ class MLCommandeDetailScreenState extends State<MLCommandeDetailScreen> {
                             width: double.infinity,
                             child: ElevatedButton(
                               onPressed: acceptOrder,
-                              child: Text('Marquer comme Terminé'),
+                              child: Text('${AppLocalizations.of(context)!.markasfinished}'),
                             ),
                           ),
                       ],

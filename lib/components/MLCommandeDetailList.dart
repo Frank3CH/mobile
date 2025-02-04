@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:esmv_store/utils/MLColors.dart';
@@ -81,7 +82,7 @@ class MLCommandeDetailListState extends State<MLCommandeDetailList> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                            'Stock disponible: ${product['available_quantity']}',
+                            '${AppLocalizations.of(context)!.availabelquantity}: ${product['available_quantity']}',
                             style: secondaryTextStyle()
                         ),
                         if (isPending)

@@ -1,4 +1,4 @@
-import 'package:esmv_store/main.dart';
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/utils/MLImage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -53,16 +53,16 @@ class MLShoppingCartComponentState extends State<MLShoppingCartComponent> {
                         ),
                         4.height,
                         Row(
-                            children: [
-                              Text(
-                                'Prix : ',
-                                style: boldTextStyle(size: 16, color: Colors.black),
-                              ),
-                              Text(
-                                '${item.product.price} MRU',
-                                style: boldTextStyle(size: 14, color: mlColorBlue),
-                              )
-                            ]
+                          children: [
+                            Text(
+                              '${AppLocalizations.of(context)!.price} : ',
+                              style: boldTextStyle(size: 16, color: Colors.black),
+                            ),
+                            Text(
+                              '${item.product.price} MRU',
+                              style: boldTextStyle(size: 14, color: mlColorBlue),
+                            ),
+                          ],
                         ),
                         4.height,
                       ],
@@ -77,7 +77,7 @@ class MLShoppingCartComponentState extends State<MLShoppingCartComponent> {
                     child: Row(
                       children: [
                         Tooltip(
-                          message: 'Réduire la quantité',
+                          message: AppLocalizations.of(context)!.reduceQuantity,
                           child: Icon(Icons.remove, size: 20)
                               .onTap(() {
                             int currentQuantity = int.parse(quantityController.text);
@@ -113,8 +113,8 @@ class MLShoppingCartComponentState extends State<MLShoppingCartComponent> {
                                   SnackBar(
                                     content: Text(
                                       newQuantity == null
-                                          ? 'Quantité invalide'
-                                          : 'Quantité non disponible. Maximum : ${item.product.quantity}',
+                                          ? AppLocalizations.of(context)!.invalidQuantity
+                                          : AppLocalizations.of(context)!.quantityNotAvailable(item.product.quantity.toString()),
                                       style: TextStyle(color: Colors.white),
                                     ),
                                     backgroundColor: Colors.red,
@@ -127,7 +127,7 @@ class MLShoppingCartComponentState extends State<MLShoppingCartComponent> {
                         ),
                         8.width,
                         Tooltip(
-                          message: 'Augmenter la quantité',
+                          message: AppLocalizations.of(context)!.increaseQuantity,
                           child: Icon(Icons.add, size: 20)
                               .onTap(() {
                             int currentQuantity = int.parse(quantityController.text);
@@ -139,7 +139,7 @@ class MLShoppingCartComponentState extends State<MLShoppingCartComponent> {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                    'Stock maximum atteint : ${item.product.quantity}',
+                                    AppLocalizations.of(context)!.maxStockReached(item.product.quantity.toString()),
                                     style: TextStyle(color: Colors.white),
                                   ),
                                   backgroundColor: Colors.orange,
@@ -154,28 +154,31 @@ class MLShoppingCartComponentState extends State<MLShoppingCartComponent> {
                 ],
               ),
               16.height,
-              // Bouton de suppression pleine largeur
+              // Full-width delete button
               InkWell(
                 onTap: () {
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text('Confirmer la suppression'),
-                        content: Text('Voulez-vous vraiment supprimer cet article du panier ?'),
+                        title: Text(AppLocalizations.of(context)!.confirmDeletion),
+                        content: Text(AppLocalizations.of(context)!.confirmDeletionMessage),
                         actions: [
                           TextButton(
-                            child: Text('Annuler'),
+                            child: Text(AppLocalizations.of(context)!.cancel),
                             onPressed: () => Navigator.of(context).pop(),
                           ),
                           TextButton(
-                            child: Text('Supprimer', style: TextStyle(color: Colors.red)),
+                            child: Text(
+                              AppLocalizations.of(context)!.delete,
+                              style: TextStyle(color: Colors.red),
+                            ),
                             onPressed: () {
                               cartProvider.removeFromCart(item.product);
                               Navigator.of(context).pop();
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
-                                  content: Text('Article supprimé du panier'),
+                                  content: Text(AppLocalizations.of(context)!.itemRemoved),
                                   backgroundColor: Colors.green,
                                 ),
                               );
@@ -202,7 +205,7 @@ class MLShoppingCartComponentState extends State<MLShoppingCartComponent> {
                       Icon(Icons.delete_outline, color: Colors.red, size: 20),
                       8.width,
                       Text(
-                        'Supprimer l\'article',
+                        AppLocalizations.of(context)!.deleteItem,
                         style: TextStyle(
                           color: Colors.red,
                           fontWeight: FontWeight.bold,

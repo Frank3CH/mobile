@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/providers/cart_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -33,28 +34,28 @@ class MLProductDetailScreenState extends State<MLProductDetailScreen> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Select Quantity'),
+          title: Text('${AppLocalizations.of(context)!.selectquantity}'),
           content: TextField(
             controller: quantityController,
             keyboardType: TextInputType.number,
             decoration: InputDecoration(
-              labelText: 'Quantity',
+              labelText: '${AppLocalizations.of(context)!.quantity}',
               border: OutlineInputBorder(),
             ),
           ),
           actions: [
             TextButton(
-              child: Text('Cancel'),
+              child: Text('${AppLocalizations.of(context)!.cancel}'),
               onPressed: () => Navigator.pop(context),
             ),
             TextButton(
-              child: Text('Ajouter au panier'),
+              child: Text('${AppLocalizations.of(context)!.addtocart}'),
               onPressed: () {
                 int quantity = int.tryParse(quantityController.text) ?? 1;
                 Provider.of<CartProvider>(context, listen: false)
                     .addToCart(product, quantity: quantity);
                 Navigator.pop(context);
-                toast('Added to cart successfully');
+                toast('${AppLocalizations.of(context)!.addedsccess}');
                 finish(context);
               },
             ),
@@ -158,7 +159,7 @@ class MLProductDetailScreenState extends State<MLProductDetailScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Ajouter au panier', style: boldTextStyle(color: white)),
+                      Text('${AppLocalizations.of(context)!.addtocart}', style: boldTextStyle(color: white)),
                       4.width,
                       Icon(Icons.shopping_bag_outlined, color: white),
                     ],

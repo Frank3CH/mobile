@@ -1,4 +1,5 @@
 import 'package:esmv_store/components/MLCommandsComponent.dart';
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/main.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -109,7 +110,7 @@ class MLOrdersScreenState extends State<MLOrdersScreen> {
                 ? SliverFillRemaining(
               hasScrollBody: false,
               child: Center(
-                child: Text('Aucune commande trouvée', style: boldTextStyle(size: 18)),
+                child: Text('${AppLocalizations.of(context)!.noorderfound}', style: boldTextStyle(size: 18)),
               ),
             )
                 : SliverList(

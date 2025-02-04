@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/main.dart';
 import 'package:esmv_store/screens/MLUserCommandsScreen.dart';
 import 'package:esmv_store/utils/MLImage.dart';
@@ -14,30 +15,45 @@ class MLPharmacyCategoriesComponent extends StatefulWidget {
 }
 
 class MLPharmacyCategoriesComponentState extends State<MLPharmacyCategoriesComponent> {
-
-
-  final List<Map<String, dynamic>> screens = [
-    {
-      'name': 'Passer une commande',
-      'icon': ml_prescription1,
-      'screen': (context) => MLOnlinePharmacyDetailScreen(index: 0, selectedCategoryId: 1),
-    },
-    {
-      'name': 'Détails Solde Comptable',
-      'icon': ml_prescription3,
-      'screen': (context) => TransactionHistoryScreen(),
-    },
-    {'name': 'Commandes en attentes', 'icon': ml_document_wait, 'screen': (context) => MLUserCommandsScreen(status:'en attente')},
-    {'name': 'Commandes validées (livraison en cours)', 'icon': ml_document_valid, 'screen': (context) => MLUserCommandsScreen(status:'Validé')},
-    {'name': 'Commandes refusées', 'icon': ml_document_rejected, 'screen': (context) => MLUserCommandsScreen(status:'refusé')},
-    {'name': 'Commandes terminées', 'icon': ml_document_final, 'screen': (context) => MLUserCommandsScreen(status:'terminé')},
-  ];
+  List<Map<String, dynamic>> screens = [];
 
 
 
   @override
   Widget build(BuildContext context) {
     var width = context.width();
+    screens = [
+      {
+        'name': AppLocalizations.of(context)!.placeOrder,
+        'icon': ml_prescription1,
+        'screen': (context) => MLOnlinePharmacyDetailScreen(index: 0, selectedCategoryId: 1),
+      },
+      {
+        'name': AppLocalizations.of(context)!.accountBalanceDetails,
+        'icon': ml_prescription3,
+        'screen': (context) => TransactionHistoryScreen(),
+      },
+      {
+        'name': AppLocalizations.of(context)!.pendingOrders,
+        'icon': ml_document_wait,
+        'screen': (context) => MLUserCommandsScreen(status: 'en attente'),
+      },
+      {
+        'name': AppLocalizations.of(context)!.validatedOrders,
+        'icon': ml_document_valid,
+        'screen': (context) => MLUserCommandsScreen(status: 'Validé'),
+      },
+      {
+        'name': AppLocalizations.of(context)!.rejectedOrders,
+        'icon': ml_document_rejected,
+        'screen': (context) => MLUserCommandsScreen(status: 'refusé'),
+      },
+      {
+        'name': AppLocalizations.of(context)!.completedOrders,
+        'icon': ml_document_final,
+        'screen': (context) => MLUserCommandsScreen(status: 'terminé'),
+      },
+    ];
 
     return Container(
       height: MediaQuery.of(context).size.height - kToolbarHeight - kBottomNavigationBarHeight,

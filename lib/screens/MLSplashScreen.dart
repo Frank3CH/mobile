@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:esmv_store/screens/MLLoginScreen.dart';
+import 'package:esmv_store/screens/MLDashboardScreen.dart';
 import 'package:esmv_store/utils/MLImage.dart';
 
 class MLSplashScreen extends StatefulWidget {
@@ -18,12 +19,16 @@ class _MLSplashScreenState extends State<MLSplashScreen> {
   Future<void> init() async {
     await 3.seconds.delay;
 
-    // Check if the user is already logged in
     bool isLoggedIn = getBoolAsync('isLoggedIn', defaultValue: false);
+    bool isAdmin = getBoolAsync('isAdmin', defaultValue: false);
 
-
+    if (isLoggedIn) {
+      /// Navigate to Dashboard directly if logged in
+      MLDashboardScreen(isAdmin: isAdmin).launch(context, isNewTask: true);
+    } else {
+      /// Navigate to Login Screen if not logged in
       MLLoginScreen().launch(context, isNewTask: true);
-
+    }
   }
 
   @override

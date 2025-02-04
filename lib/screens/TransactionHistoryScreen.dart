@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/providers/auth_provider.dart';
 import 'package:esmv_store/screens/MLAddToCartScreen.dart';
 import 'package:esmv_store/screens/MLDashboardScreen.dart';
@@ -43,7 +44,7 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
               children: [
                 mlBackToPreviousWidget(context, white),
                 8.width,
-                Text('Détails Solde comptable',
+                Text('${AppLocalizations.of(context)!.detsoldecomptable}',
                     style: boldTextStyle(color: whiteColor, size: 20)).expand(),
                 Icon(Icons.home_outlined, color: white, size: 24).onTap(() {
                   if (mounted) {
@@ -130,7 +131,7 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
                               subtitle: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Échéance: ${facture.soldeEcheance} MRU',
+                                  Text('${AppLocalizations.of(context)!.echeance}: ${facture.soldeEcheance} MRU',
                                       style: secondaryTextStyle(
                                           color: Colors.grey[700])),
                                 ],

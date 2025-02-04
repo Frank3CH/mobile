@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/main.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -6,7 +7,6 @@ import 'package:esmv_store/utils/MLCommon.dart';
 import 'package:esmv_store/screens/MLForgetPasswordScreen.dart';
 import 'package:esmv_store/utils/MLColors.dart';
 import 'package:esmv_store/utils/MLImage.dart';
-import 'package:esmv_store/utils/MLString.dart';
 import 'package:esmv_store/providers/auth_provider.dart';
 
 class MLLoginScreen extends StatefulWidget {
@@ -19,7 +19,8 @@ class _MLLoginScreenState extends State<MLLoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   bool _rememberMe = false;
-  bool _isPasswordHidden = true; // Add this line
+  bool _isPasswordHidden = true;
+  String _selectedLanguage = 'fr';
 
   @override
   void initState() {
@@ -51,7 +52,7 @@ class _MLLoginScreenState extends State<MLLoginScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   60.height,
-                  Text(mlLogin_title!, style: secondaryTextStyle(size: 16)),
+                  Text(AppLocalizations.of(context)!.seconnecter, style: secondaryTextStyle(size: 16)),
                   16.height,
                   Row(
                     children: [
@@ -60,7 +61,7 @@ class _MLLoginScreenState extends State<MLLoginScreen> {
                         controller: _emailController,
                         textFieldType: TextFieldType.EMAIL,
                         decoration: InputDecoration(
-                          labelText: mlPhoneNumber!,
+                          labelText: AppLocalizations.of(context)!.email,
                           labelStyle: secondaryTextStyle(size: 16),
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: mlColorLightGrey.withOpacity(0.2), width: 1),
@@ -75,7 +76,7 @@ class _MLLoginScreenState extends State<MLLoginScreen> {
                     textFieldType: TextFieldType.PASSWORD,
                     obscureText: _isPasswordHidden, // Use this property to toggle password visibility
                     decoration: InputDecoration(
-                      labelText: mlPassword!,
+                      labelText: AppLocalizations.of(context)!.password,
                       labelStyle: secondaryTextStyle(size: 16),
                       prefixIcon: Icon(Icons.lock_outline, color: appStore.isDarkModeOn ? white : black),
                       suffixIcon: IconButton(
@@ -97,11 +98,35 @@ class _MLLoginScreenState extends State<MLLoginScreen> {
                   8.height,
                   Align(
                     alignment: Alignment.topRight,
-                    child: Text(mlForget_password!, style: secondaryTextStyle(size: 16)).onTap(
+                    child: Text(AppLocalizations.of(context)!.motdepasseoulier, style: secondaryTextStyle(size: 16)).onTap(
                           () {
                         MLForgetPasswordScreen().launch(context);
                       },
                     ),
+                  ),
+                  16.height,
+                  DropdownButton<String>(
+                    value: _selectedLanguage,
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        _selectedLanguage = newValue!;
+                      });
+                      // Update app locale
+                      AppLocalizations.delegate.load(Locale(newValue!));
+                      MyApp.setLocale(context, Locale(newValue));
+                    },
+                    items: <String>['en', 'fr', 'ar'] // Add supported languages
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(
+                          value == 'en' ? 'English' :
+                          value == 'fr' ? 'Français' :
+                          'العربية', // Arabic label
+                          style: TextStyle(fontFamily: 'ArabicFont'), // Optional: Ensure proper Arabic font
+                        ),
+                      );
+                    }).toList(),
                   ),
                   8.height,
                   Row(
@@ -114,7 +139,7 @@ class _MLLoginScreenState extends State<MLLoginScreen> {
                           });
                         },
                       ),
-                      Text('Remember Me', style: secondaryTextStyle(size: 16)),
+                      Text(AppLocalizations.of(context)!.rememberme, style: secondaryTextStyle(size: 16)),
                     ],
                   ),
                   24.height,
@@ -129,7 +154,7 @@ class _MLLoginScreenState extends State<MLLoginScreen> {
                         _rememberMe, // Pass the remember me value
                       );
                     },
-                    child: Text(mlLogin!, style: boldTextStyle(color: white)),
+                    child: Text(AppLocalizations.of(context)!.login, style: boldTextStyle(color: white)),
                   ),
                   22.height,
                 ],

@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/screens/MLSearchScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -106,7 +107,7 @@ class MLAddToCartScreenState extends State<MLAddToCartScreen> {
                         currentWidget == 0
                             ? Row(
                           children: [
-                            Text('Votre Panier', style: boldTextStyle(size: 24)),
+                            Text(AppLocalizations.of(context)!.panier, style: boldTextStyle(size: 24)),
                             8.width,
                             Container(
                               padding: EdgeInsets.all(8.0),
@@ -136,7 +137,7 @@ class MLAddToCartScreenState extends State<MLAddToCartScreen> {
                             ),
                           ],
                         )
-                            : Text('Votre Commande', style: boldTextStyle(size: 22)),
+                            : Text(AppLocalizations.of(context)!.yourorder, style: boldTextStyle(size: 22)),
                       ],
                     ).paddingAll(16.0),
                     8.height,
@@ -168,7 +169,7 @@ class MLAddToCartScreenState extends State<MLAddToCartScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Total', style: secondaryTextStyle(size: 16)),
+                        Text(AppLocalizations.of(context)!.total, style: secondaryTextStyle(size: 16)),
                         Text('${cartProvider.totalPrice.toStringAsFixed(2)} MRU', style: boldTextStyle()),
                       ],
                     ),
@@ -183,7 +184,7 @@ class MLAddToCartScreenState extends State<MLAddToCartScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Commandez', style: boldTextStyle(color: white)),
+                          Text(AppLocalizations.of(context)!.command , style: boldTextStyle(color: white)),
                           4.width,
                           Icon(Icons.arrow_forward_ios, color: white, size: 16),
                         ],

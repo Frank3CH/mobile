@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:esmv_store/main.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -50,7 +51,7 @@ class MLProductDetailComponent extends StatelessWidget {
           16.height,
           Divider(thickness: 1.0),
           8.height,
-          Text('Specification', style: boldTextStyle()),
+          Text(AppLocalizations.of(context)!.specification, style: boldTextStyle()),
           16.height,
           Table(
             children: [
@@ -63,7 +64,7 @@ class MLProductDetailComponent extends StatelessWidget {
                         children: [
                           Icon(Icons.local_atm, color: Colors.blue, size: 18),
                           4.width,
-                          Text('Prix  :  ', style: boldTextStyle()),
+                          Text('${AppLocalizations.of(context)!.price} :  ', style: boldTextStyle()),
                           Text(price, style: boldTextStyle(size: 20, color: Colors.blue.shade600)),
                           Text(' MRU', style: boldTextStyle(size: 20, color: Colors.blue.shade600)),
                         ],

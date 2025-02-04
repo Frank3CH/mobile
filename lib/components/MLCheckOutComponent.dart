@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/utils/MLImage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -48,7 +49,7 @@ class MLCheckOutComponentState extends State<MLCheckOutComponent> {
               children: [
                 8.height,
                 Text(
-                  'Détails de votre Commande',
+                  AppLocalizations.of(context)!.detailscommandes,
                   style: secondaryTextStyle(size: 16),
                 ).paddingSymmetric(horizontal: 8),
                 8.height,
@@ -81,7 +82,7 @@ class MLCheckOutComponentState extends State<MLCheckOutComponent> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Icon(Icons.shopping_bag_outlined, size: 18, color: textSecondaryColorGlobal),
-                                    Text('Quantity: ', style: boldTextStyle(size: 14, color: textSecondaryColorGlobal)),
+                                    Text(AppLocalizations.of(context)!.quantity, style: boldTextStyle(size: 14, color: textSecondaryColorGlobal)),
                                     Text('${item.quantity}', style: boldTextStyle(size: 14)),
                                     50.width,
                                     Text('${item.product.price} MRU', style: boldTextStyle(size: 14, color: mlColorBlue)),

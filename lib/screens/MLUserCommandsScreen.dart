@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:esmv_store/components/MLDeliveredDataComponent.dart';
 import 'package:esmv_store/services/order_service.dart';
@@ -50,7 +51,7 @@ class _MLUserCommandsScreenState extends State<MLUserCommandsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Commandes - ${widget.status}'),
+        title: Text('${AppLocalizations.of(context)!.order} - ${widget.status}'),
       ),
       body: isLoading
           ? Center(child: CircularProgressIndicator())

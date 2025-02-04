@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:esmv_store/main.dart';
@@ -22,7 +23,7 @@ class MLOrderSuccessComponent extends StatelessWidget {
       child: Column(
         children: [
           16.height,
-          Text('Commande total', style: secondaryTextStyle(size: 16)),
+          Text(AppLocalizations.of(context)!.totalorder, style: secondaryTextStyle(size: 16)),
           8.height,
           Text('${totalPrice} MRU', style: boldTextStyle(size: 18)),
           16.height,

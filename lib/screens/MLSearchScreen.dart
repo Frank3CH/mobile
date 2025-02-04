@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/screens/MLProductDetailScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -68,7 +69,7 @@ class MLSearchScreenState extends State<MLSearchScreen> {
               children: [
                 mlBackToPreviousIcon(context, white),
                 8.width,
-                Text('Rechercher', style: boldTextStyle(size: 20, color: white)).expand(),
+                Text('${AppLocalizations.of(context)!.rechercher}', style: boldTextStyle(size: 20, color: white)).expand(),
               ],
             ).paddingAll(16.0),
             16.height,
@@ -92,7 +93,7 @@ class MLSearchScreenState extends State<MLSearchScreen> {
                           child: TextField(
                             controller: searchController,
                             decoration: InputDecoration(
-                              hintText: 'Rechercher des produits',
+                              hintText: '${AppLocalizations.of(context)!.rechercherproduct}',
                               border: InputBorder.none,
                             ),
                             onChanged: (value) {
@@ -113,7 +114,7 @@ class MLSearchScreenState extends State<MLSearchScreen> {
                             return Center(child: CircularProgressIndicator());
                           }
                           if (productProvider.products.isEmpty) {
-                            return Text('Aucun produit trouvé.');
+                            return Text('${AppLocalizations.of(context)!.noproductfound}.');
                           }
                           return ListView.separated(
                             itemCount: productProvider.products.length,
@@ -122,7 +123,7 @@ class MLSearchScreenState extends State<MLSearchScreen> {
                               Product product = productProvider.products[index];
                               return ListTile(
                                 title: Text(product.name),
-                                subtitle: Text('Réf :${product.ref}' , style: secondaryTextStyle(size: 16), maxLines: 1, overflow: TextOverflow.ellipsis),
+                                subtitle: Text('${AppLocalizations.of(context)!.reference} :${product.ref}' , style: secondaryTextStyle(size: 16), maxLines: 1, overflow: TextOverflow.ellipsis),
                                 onTap: () {
                                   MLProductDetailScreen(productId: product.id).launch(context);
                                 },

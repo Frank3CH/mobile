@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/model/Commande.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -45,7 +46,7 @@ class MLOrderDetailScreenState extends State<MLOrderDetailScreen> {
               children: [
                 mlBackToPreviousWidget(context, white),
                 8.width,
-                Text('Commande', style: boldTextStyle(size: 22, color: white)).expand(),
+                Text('${AppLocalizations.of(context)!.order}', style: boldTextStyle(size: 22, color: white)).expand(),
                 Icon(Icons.info_outline, color: white, size: 22),
                 8.width,
               ],

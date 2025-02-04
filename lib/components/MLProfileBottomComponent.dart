@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/providers/auth_provider.dart';
 import 'package:esmv_store/screens/TransactionHistoryScreen.dart';
 import 'package:esmv_store/utils/MLImage.dart';
@@ -26,6 +27,7 @@ class MLProfileBottomComponentState extends State<MLProfileBottomComponent> {
   List<String> categoriesData = <String>[ 'logout'];
   List<Color> customColor = <Color>[Colors.blueAccent, Colors.orangeAccent];
   List<MLProfileCardData> mlProfileData = mlProfileDataList();
+  String _selectedLanguage = 'fr';
 
   @override
   void initState() {
@@ -43,23 +45,23 @@ class MLProfileBottomComponentState extends State<MLProfileBottomComponent> {
       barrierDismissible: false, // User must tap a button!
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Confirm Logout'),
+          title: Text(AppLocalizations.of(context)!.confirmlogout),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text('Are you sure you want to logout?'),
+                Text(AppLocalizations.of(context)!.questionlogout),
               ],
             ),
           ),
           actions: <Widget>[
             TextButton(
-              child: Text('Cancel'),
+              child: Text(AppLocalizations.of(context)!.cancel),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
             TextButton(
-              child: Text('Logout'),
+              child: Text(AppLocalizations.of(context)!.logout),
               onPressed: () {
                 Navigator.of(context).pop();
                 Provider.of<AuthProvider>(context, listen: false).logout(context);
@@ -92,7 +94,30 @@ class MLProfileBottomComponentState extends State<MLProfileBottomComponent> {
               Text('Options', style: boldTextStyle(size: 18)),
             ],
           ),
-
+          DropdownButton<String>(
+            value: _selectedLanguage,
+            onChanged: (String? newValue) {
+              setState(() {
+                _selectedLanguage = newValue!;
+              });
+              // Update app locale
+              AppLocalizations.delegate.load(Locale(newValue!));
+              MyApp.setLocale(context, Locale(newValue));
+            },
+            items: <String>['en', 'fr', 'ar'] // Add supported languages
+                .map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(
+                  value == 'en' ? 'English' :
+                  value == 'fr' ? 'Français' :
+                  'العربية', // Arabic label
+                  style: TextStyle(fontFamily: 'ArabicFont'), // Optional: Ensure proper Arabic font
+                ),
+              );
+            }).toList(),
+          ),
+          16.height,
           16.height,
           Container(
             padding: EdgeInsets.all(8.0),

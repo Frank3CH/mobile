@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/screens/MLSearchScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -73,7 +74,7 @@ class _MLHomeTopComponentState extends State<MLHomeTopComponent> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Bonjour", style: boldTextStyle(color: whiteColor)),
+                      Text(AppLocalizations.of(context)!.welcome, style: boldTextStyle(color: whiteColor)),
                       4.height,
                       if (isLoading)
                         CircularProgressIndicator(color: whiteColor)

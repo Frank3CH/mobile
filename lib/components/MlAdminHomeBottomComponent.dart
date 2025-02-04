@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/main.dart';
 import 'package:esmv_store/screens/MlOrdersScreen.dart';
 import 'package:flutter/material.dart';
@@ -9,15 +10,16 @@ class MlAdminHomeBottomComponent extends StatefulWidget {
 }
 
 class _MlAdminHomeBottomComponentState extends State<MlAdminHomeBottomComponent> {
-  List<Map<String, dynamic>> data = <Map<String, dynamic>>[
-    {'name': 'Commandes en attente', 'icon': Icons.hourglass_empty, 'orderType': 'Commande en attente'},
-    {'name': 'Commandes validées (livraison en cours)', 'icon': Icons.check_circle, 'orderType': 'Commande validée'},
-    {'name': 'Commandes refusées', 'icon': Icons.cancel, 'orderType': 'Commande refusée'},
-    {'name': 'Commandes Terminées', 'icon': Icons.check_box_sharp, 'orderType': 'Commande terminée'},
-  ];
+  List<Map<String, dynamic>> data = [];
 
   @override
   Widget build(BuildContext context) {
+   data = [
+      {'name': AppLocalizations.of(context)!.pendingOrders, 'icon': Icons.hourglass_empty, 'orderType': 'Commande en attente'},
+      {'name': AppLocalizations.of(context)!.validatedOrders, 'icon': Icons.check_circle, 'orderType': 'Commande validée'},
+      {'name': AppLocalizations.of(context)!.rejectedOrders, 'icon': Icons.cancel, 'orderType': 'Commande refusée'},
+      {'name': AppLocalizations.of(context)!.completedOrders, 'icon': Icons.check_box_sharp, 'orderType': 'Commande terminée'},
+    ];
     var width = context.width();
 
     return Container(

@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:esmv_store/main.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -49,7 +50,7 @@ class MLNotificationComponentState extends State<MLNotificationComponent> {
           ? Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Text('Aucune notification', style: secondaryTextStyle()),
+          child: Text(AppLocalizations.of(context)!.nonotifcation, style: secondaryTextStyle()),
         ),
       )
           : Column(

@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:esmv_store/utils/MLColors.dart';
@@ -13,17 +14,17 @@ class MLConfirmOrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<MLOrderSuccessData> orderDetails = [
-      MLOrderSuccessData(title: 'Reference de Commande :', data: '#${order['ref']}'),
-      MLOrderSuccessData(title: 'Date Création :', data: '#${order['dateCreation']}'),
-      MLOrderSuccessData(title: 'Statut:', data: '#${order['status']}'),
-      MLOrderSuccessData(title: 'Créé par:', data: '#${order['pharmacien']['userIdentifier']}')
+      MLOrderSuccessData(title: '${AppLocalizations.of(context)!.orderref} :', data: '#${order['ref']}'),
+      MLOrderSuccessData(title: '${AppLocalizations.of(context)!.date} :', data: '#${order['dateCreation']}'),
+      MLOrderSuccessData(title: '${AppLocalizations.of(context)!.statut}:', data: '#${order['status']}'),
+      MLOrderSuccessData(title: '${AppLocalizations.of(context)!.ordercreator}:', data: '#${order['pharmacien']['userIdentifier']}')
     ];
 
     double totalPrice = double.parse(order['totalPrice']);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Order Confirmation'),
+        title: Text('${AppLocalizations.of(context)!.orderconf}'),
       ),
       body: ListView.builder(
         itemCount: 1,
@@ -45,7 +46,7 @@ class MLConfirmOrderScreen extends StatelessWidget {
                 (Route<dynamic> route) => false,
           );
         },
-        child: Text('Back Home', style: boldTextStyle(color: white)),
+        child: Text('${AppLocalizations.of(context)!.backhome}', style: boldTextStyle(color: white)),
       ).paddingAll(20),
     );
   }

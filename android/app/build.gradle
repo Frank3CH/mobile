@@ -43,7 +43,7 @@ android {
 
     defaultConfig {
         applicationId "com.tas.esmv_store"  // Ensure this matches your package name
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 34
         versionCode 1
         versionName "1.0.0"

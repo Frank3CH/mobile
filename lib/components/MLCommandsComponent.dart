@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:esmv_store/screens/MLCommandeDetailScreen.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -31,7 +32,7 @@ class MLCommandsComponent extends StatelessWidget {
             ),
             child: ListTile(
               title: Text(
-                'Commande #$orderRef',
+                '${AppLocalizations.of(context)!.order} #$orderRef',
                 style: boldTextStyle(size: 14),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
@@ -40,13 +41,13 @@ class MLCommandsComponent extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Statut: $orderStatus   CLIENT : $pharmacien',
+                    '${AppLocalizations.of(context)!.statut}: $orderStatus   ${AppLocalizations.of(context)!.client} : $pharmacien',
                     style: secondaryTextStyle(size: 12),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
                   Text(
-                    'Prix total: ${totalPrice.toString()} MRU',
+                    '${AppLocalizations.of(context)!.totalprice} : ${totalPrice.toString()} MRU',
                     style: boldTextStyle(size: 14, color: Colors.blue),
                   ),
                 ],

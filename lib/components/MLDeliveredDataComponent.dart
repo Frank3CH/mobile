@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/utils/MLImage.dart';
 import 'package:flutter/material.dart';
 import 'package:esmv_store/utils/MLCommon.dart';
@@ -41,7 +42,7 @@ class MLDeliveredDataComponentState extends State<MLDeliveredDataComponent> {
           ? Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Text('Aucune activité', style: secondaryTextStyle()),
+          child: Text(AppLocalizations.of(context)!.noactivity, style: secondaryTextStyle()),
         ),
       )
           : Column(
@@ -80,7 +81,7 @@ class MLDeliveredDataComponentState extends State<MLDeliveredDataComponent> {
                                   ],
                                 ),
                                 8.height,
-                                Text((' total : ${order.products.length} produits'), style: secondaryTextStyle()),
+                                Text((' ${AppLocalizations.of(context)!.total} : ${order.products.length} ${AppLocalizations.of(context)!.products}'), style: secondaryTextStyle()),
 
                                 8.height,
                               ],
@@ -92,7 +93,7 @@ class MLDeliveredDataComponentState extends State<MLDeliveredDataComponent> {
                         8.height,
                         Row(
                           children: [
-                            Text('Total: ', style: boldTextStyle()),
+                            Text('${AppLocalizations.of(context)!.total} : ', style: boldTextStyle()),
                             Text('${order.totalPrice.toStringAsFixed(2)} MRU', style: boldTextStyle(color: mlColorDarkBlue)).expand(),
                             Text(order.dateCreation.toString(), style: boldTextStyle())
                           ],

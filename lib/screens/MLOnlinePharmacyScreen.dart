@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/screens/MLAddToCartScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -60,7 +61,7 @@ class MLOnlinePharmacyScreenState extends State<MLOnlinePharmacyScreen> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Bienvenue', style: secondaryTextStyle(size: 12, color: white.withOpacity(0.5))),
+                              Text('${AppLocalizations.of(context)!.welcome}', style: secondaryTextStyle(size: 12, color: white.withOpacity(0.5))),
                               4.height,
                               Text('John Doe', style: boldTextStyle(size: 14, color: white)),
                             ],

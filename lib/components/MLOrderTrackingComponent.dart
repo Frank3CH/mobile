@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/model/Commande.dart';
 import 'package:flutter/material.dart';
 import 'package:esmv_store/main.dart';
@@ -46,17 +47,17 @@ class MLOrderTrackingDetailComponentState extends State<MLOrderTrackingDetailCom
       shrinkWrap: true,
       children: [
         16.height,
-        Text('Détails', style: boldTextStyle(size: 18)),
+        Text(AppLocalizations.of(context)!.details, style: boldTextStyle(size: 18)),
         16.height,
-        Text('Statut: ${order.status}', style: boldTextStyle()),
+        Text('${AppLocalizations.of(context)!.statut}: ${order.status}', style: boldTextStyle()),
         8.height,
-        Text('Réference: ${order.ref}', style: secondaryTextStyle()),
+        Text('${AppLocalizations.of(context)!.reference}: ${order.ref}', style: secondaryTextStyle()),
         8.height,
-        Text('Date: ${order.dateCreation}', style: secondaryTextStyle()),
+        Text('${AppLocalizations.of(context)!.date}: ${order.dateCreation}', style: secondaryTextStyle()),
         16.height,
         Divider(thickness: 0.5),
         16.height,
-        Text('Produits', style: boldTextStyle(size: 18)),
+        Text(AppLocalizations.of(context)!.products, style: boldTextStyle(size: 18)),
         16.height,
         Column(
           children: order.products.map((product) {
@@ -107,7 +108,7 @@ class MLOrderTrackingDetailComponentState extends State<MLOrderTrackingDetailCom
                                 color: quantityColor,
                               ),
                               Text(
-                                  'Quantité: ',
+                                  '${AppLocalizations.of(context)!.quantity}: ',
                                   style: boldTextStyle(
                                       color: quantityColor,
                                       size: 14

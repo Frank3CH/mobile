@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/screens/MLAddToCartScreen.dart';
 import 'package:esmv_store/screens/MLDashboardScreen.dart';
 import 'package:esmv_store/screens/MLSearchScreen.dart';
@@ -56,7 +57,7 @@ class MLOnlinePharmacyDetailScreenState extends State<MLOnlinePharmacyDetailScre
                   children: [
                     mlBackToPreviousWidget(context, white),
                     8.width,
-                    Text('Liste des medicaments', style: boldTextStyle(color: whiteColor, size: 20)).expand(),
+                    Text('${AppLocalizations.of(context)!.listmed}', style: boldTextStyle(color: whiteColor, size: 20)).expand(),
                     Icon(Icons.home_outlined, color: white, size: 24).onTap(() {
                       if (mounted) {
                         MLDashboardScreen().launch(context);
@@ -101,7 +102,7 @@ class MLOnlinePharmacyDetailScreenState extends State<MLOnlinePharmacyDetailScre
                 8.height,
                 Row(
                   children: [
-                    Text('liste des médicaments', style: secondaryTextStyle(size: 12, color: white.withOpacity(0.4))),
+                    Text('${AppLocalizations.of(context)!.listmed}', style: secondaryTextStyle(size: 12, color: white.withOpacity(0.4))),
                     (widget.index == 0)
                         ? Text('>', style: secondaryTextStyle(size: 12, color: white.withOpacity(0.4)))
                         : Text('>', style: secondaryTextStyle(size: 12, color: white.withOpacity(0.3))),

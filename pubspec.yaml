@@ -9,6 +9,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_localizations:
+    sdk: flutter
   # Base
   cupertino_icons: ^1.0.6
   nb_utils: ^7.0.7
@@ -22,13 +24,15 @@ dependencies:
   flutter_staggered_grid_view: ^0.7.0
   country_code_picker: ^3.0.0
   percent_indicator: ^4.2.3
-  cloud_firestore: ^4.17.5
-  firebase_auth: ^4.19.6
-  firebase_core: ^2.32.0
+  cloud_firestore: ^5.6.2
+  flutter_local_notifications: ^18.0.1
+  firebase_auth: ^5.4.1
+  firebase_core: ^3.10.1
   dio: ^5.4.3+1
   provider: ^6.1.2
   flutter_localization: ^0.2.0
   infinite_scroll_pagination: ^4.0.0
+  firebase_messaging: ^15.2.1
 
 dependency_overrides:
   intl: ^0.18.1
@@ -42,11 +46,10 @@ dev_dependencies:
   mobx_codegen: ^2.4.0
   build_runner: ^2.4.6
   #flutter packages pub run build_runner build --delete-conflicting-outputs
-
+# The following section is specific to Flutter.
 flutter:
-
+  generate: true
   uses-material-design: true
-
   assets:
     - images/
 
