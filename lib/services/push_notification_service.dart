@@ -131,7 +131,8 @@ class PushNotificationService {
   }
 
   void _handleMessageOpenedApp(RemoteMessage message) {
-    print('Message opened app: ${message.data}');
+      print('Message opened app: ${message.data}');
+      navigatorKey.currentState?.pushNamed('/MLDashboardScreen');
 
   }
 }

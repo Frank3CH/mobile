@@ -15,6 +15,7 @@ import 'package:provider/provider.dart';
 import 'package:esmv_store/providers/auth_provider.dart';
 import 'package:esmv_store/providers/product_provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:upgrader/upgrader.dart'; // Import upgrader package
 
 AppStore appStore = AppStore();
 
@@ -72,9 +73,8 @@ class _MyAppState extends State<MyApp> {
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-          locale: _locale, // Use the selected locale
+          locale: _locale,
           localeResolutionCallback: (locale, supportedLocales) {
-            // Return the locale if it's supported, otherwise fallback to the default locale
             for (var supportedLocale in supportedLocales) {
               if (supportedLocale.languageCode == locale?.languageCode) {
                 return supportedLocale;
@@ -84,7 +84,13 @@ class _MyAppState extends State<MyApp> {
           },
           initialRoute: '/MLSplashScreen',
           routes: {
-            '/MLSplashScreen': (context) => MLSplashScreen(),
+            '/MLSplashScreen': (context) => UpgradeAlert(
+              child: MLSplashScreen(),
+              barrierDismissible: false, // Users cannot dismiss the update dialog
+              dialogStyle: UpgradeDialogStyle.material,
+              showLater: false,
+              showIgnore: false,
+            ),
             '/MLLoginScreen': (context) => MLLoginScreen(),
             '/MLDashboardScreen': (context) => MLDashboardScreen(),
           },
