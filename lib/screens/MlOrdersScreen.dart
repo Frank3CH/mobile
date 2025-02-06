@@ -73,7 +73,19 @@ class MLOrdersScreenState extends State<MLOrdersScreen> {
     } else {
       orders = [];
     }
-
+    String getTranslatedOrderType(BuildContext context, String orderType) {
+      if (orderType == 'Commande en attente') {
+        return AppLocalizations.of(context)!.pendingOrder;
+      } else if (orderType == 'Commande validée') {
+        return AppLocalizations.of(context)!.validatedOrder;
+      } else if (orderType == 'Commande terminée') {
+        return AppLocalizations.of(context)!.completedOrder;
+      } else if (orderType == 'Commande refusée') {
+        return AppLocalizations.of(context)!.rejectedOrder;
+      } else {
+        return orderType; // Fallback to original text if not found
+      }
+    }
 
     return SafeArea(
       child: Scaffold(
@@ -96,7 +108,7 @@ class MLOrdersScreenState extends State<MLOrdersScreen> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(widget.orderType, style: boldTextStyle(size: 14, color: white)),
+                              Text(getTranslatedOrderType(context, widget.orderType), style: boldTextStyle(size: 14, color: white)),
                             ],
                           ),
                         ],

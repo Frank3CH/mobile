@@ -208,4 +208,49 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get ordercreator => 'منشئ الطلب';
+
+  @override
+  String get pendingOrder => 'الطلبات المعلقة';
+
+  @override
+  String get validatedOrder => 'الطلبات المصادق عليها';
+
+  @override
+  String get completedOrder => 'الطلبات المنجزة';
+
+  @override
+  String get rejectedOrder => 'الطلبات المرفوضة';
+
+  @override
+  String get solde => 'الرصيد';
+
+  @override
+  String get mlMy_activity => 'نشاطي التجاري';
+
+  @override
+  String get mlHistory => 'التاريخ';
+
+  @override
+  String get mltotal => 'الكل';
+
+  @override
+  String get mlinprogress => 'قيد التنفيذ';
+
+  @override
+  String get mlrefused => 'مرفوضة';
+
+  @override
+  String get mlvalid => 'مصادق عليه';
+
+  @override
+  String get mlclosed => 'مغلقة';
+
+  @override
+  String get mlNotification => 'إشعارات';
+
+  @override
+  String get options => 'خيارات';
+
+  @override
+  String get darkmode => 'الوضع المظلم';
 }

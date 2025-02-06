@@ -10,7 +10,7 @@ import 'package:esmv_store/model/Commande.dart';
 class MLDeliveredDataComponent extends StatefulWidget {
   final List<Commande> orders;
 
-  MLDeliveredDataComponent({required this.orders});
+    MLDeliveredDataComponent({required this.orders});
 
   static String tag = '/MLDeliveredDataComponent';
 

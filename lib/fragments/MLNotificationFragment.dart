@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:esmv_store/components/MLNotificationComponent.dart';
@@ -51,7 +52,7 @@ class MLNotificationFragmentState extends State<MLNotificationFragment> {
                 children: [
                   Row(
                     children: [
-                      Text(mlNotification!, style: boldTextStyle(size: 20)),
+                      Text(AppLocalizations.of(context)!.mlNotification, style: boldTextStyle(size: 20)),
                       8.width
                     ],
                   ).expand(),

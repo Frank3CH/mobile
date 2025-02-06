@@ -208,4 +208,49 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get ordercreator => 'Createur de Commande';
+
+  @override
+  String get pendingOrder => 'Commande en attente';
+
+  @override
+  String get validatedOrder => 'Commande validée';
+
+  @override
+  String get completedOrder => 'Commande terminée';
+
+  @override
+  String get rejectedOrder => 'Commande refusée';
+
+  @override
+  String get solde => 'Solde';
+
+  @override
+  String get mlMy_activity => 'Mon Activité';
+
+  @override
+  String get mlHistory => 'Historique';
+
+  @override
+  String get mltotal => 'Toutes';
+
+  @override
+  String get mlinprogress => 'en cours';
+
+  @override
+  String get mlrefused => 'Refusé';
+
+  @override
+  String get mlvalid => 'validé';
+
+  @override
+  String get mlclosed => 'Terminé';
+
+  @override
+  String get mlNotification => 'Notifications';
+
+  @override
+  String get options => 'Options';
+
+  @override
+  String get darkmode => 'DarkMode';
 }

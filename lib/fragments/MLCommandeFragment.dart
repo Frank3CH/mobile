@@ -1,3 +1,4 @@
+import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/main.dart';
 import 'package:esmv_store/providers/auth_provider.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class MLCommandeFragmentState extends State<MLCommandeFragment> with SingleTicke
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 4, vsync: this);
+    _tabController = TabController(length: 5, vsync: this);
     _tabController.addListener(_handleTabSelection);
     fetchOrders();
   }
@@ -55,9 +56,12 @@ class MLCommandeFragmentState extends State<MLCommandeFragment> with SingleTicke
         filteredOrders = orders.where((order) => order.status == 'en attente').toList();
         break;
       case 2:
-        filteredOrders = orders.where((order) => order.status == 'Validé').toList();
+        filteredOrders = orders.where((order) => order.status == 'annulé').toList();
         break;
       case 3:
+        filteredOrders = orders.where((order) => order.status == 'Validé').toList();
+        break;
+      case 4:
         filteredOrders = orders.where((order) => order.status == 'terminé').toList();
         break;
       default:
@@ -93,8 +97,8 @@ class MLCommandeFragmentState extends State<MLCommandeFragment> with SingleTicke
           children: [
             Row(
               children: [
-                Text(mlMy_activity!, style: boldTextStyle(size: 20, color: white)).expand(),
-                Text(mlHistory!, style: secondaryTextStyle(color: white)).paddingRight(8.0),
+                Text(AppLocalizations.of(context)!.mlMy_activity, style: boldTextStyle(size: 20, color: white)).expand(),
+                Text(AppLocalizations.of(context)!.mlHistory, style: secondaryTextStyle(color: white)).paddingRight(8.0),
               ],
             ).paddingAll(16.0),
             8.width,
@@ -107,7 +111,7 @@ class MLCommandeFragmentState extends State<MLCommandeFragment> with SingleTicke
                 children: [
                   Row(
                     children: [
-                      Text('Solde :', style: boldTextStyle(size: 20, color: Colors.black)).paddingLeft(80).expand(),
+                      Text('${AppLocalizations.of(context)!.solde}:', style: boldTextStyle(size: 20, color: Colors.black)).paddingLeft(80).expand(),
                       Text(authProvider.userProfile?.solde ?? '0.0', style: secondaryTextStyle(size: 16, color: Colors.black)).paddingRight(80),
                     ],
                   ).paddingAll(8.0),
@@ -120,15 +124,17 @@ class MLCommandeFragmentState extends State<MLCommandeFragment> with SingleTicke
                     unselectedLabelColor: Colors.grey,
                     labelStyle: primaryTextStyle(size: 14),
                     tabs: [
-                      Tab(text: mltotal),
-                      Tab(text: mlinprogress),
-                      Tab(text: mlvalid),
-                      Tab(text: mlclosed),
+                      Tab(text: AppLocalizations.of(context)!.mltotal),
+                      Tab(text: AppLocalizations.of(context)!.mlinprogress),
+                      Tab(text: AppLocalizations.of(context)!.mlrefused),
+                      Tab(text: AppLocalizations.of(context)!.mlvalid),
+                      Tab(text: AppLocalizations.of(context)!.mlclosed),
                     ],
                   ),
                   TabBarView(
                     controller: _tabController,
                     children: [
+                      MLDeliveredDataComponent(orders: filteredOrders),
                       MLDeliveredDataComponent(orders: filteredOrders),
                       MLDeliveredDataComponent(orders: filteredOrders),
                       MLDeliveredDataComponent(orders: filteredOrders),

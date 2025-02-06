@@ -91,7 +91,7 @@ class MLProfileBottomComponentState extends State<MLProfileBottomComponent> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Options', style: boldTextStyle(size: 18)),
+              Text(AppLocalizations.of(context)!.options, style: boldTextStyle(size: 18)),
             ],
           ),
           DropdownButton<String>(
@@ -129,7 +129,7 @@ class MLProfileBottomComponentState extends State<MLProfileBottomComponent> {
                   children: [
                     Image.asset('images/ic_theme.png', height: 24, width: 24, color: Colors.blue).paddingOnly(left: 4),
                     8.width,
-                    Text('DarkMode', style: primaryTextStyle()),
+                    Text(AppLocalizations.of(context)!.darkmode, style: primaryTextStyle()),
                   ],
                 ),
                 Switch(

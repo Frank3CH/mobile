@@ -65,5 +65,21 @@
   "orderref": "مرجع الطلب",
   "ordercreator": "منشئ الطلب",
   "accountBalanceDetails": "تفاصيل الرصيد المحاسبي",
-  "placeOrder": "إتمام الطلب"
+  "placeOrder": "إتمام الطلب",
+  "pendingOrder": "الطلبات المعلقة",
+  "validatedOrder": "الطلبات المصادق عليها",
+  "completedOrder": "الطلبات المنجزة",
+  "rejectedOrder": "الطلبات المرفوضة",
+  "solde" : "الرصيد",
+  "mlMy_activity": "نشاطي التجاري",
+  "mlHistory" : "التاريخ",
+  "mltotal" : "الكل",
+  "mlinprogress" : "قيد التنفيذ",
+  "mlrefused" : "مرفوضة",
+  "mlvalid" : "مصادق عليه",
+  "mlclosed" : "مغلقة",
+  "mlNotification" : "إشعارات",
+  "options" : "خيارات",
+  "darkmode" : "الوضع المظلم"
+
 }

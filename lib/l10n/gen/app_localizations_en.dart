@@ -208,4 +208,49 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get ordercreator => 'Order Creator';
+
+  @override
+  String get pendingOrder => 'Pending Order';
+
+  @override
+  String get validatedOrder => 'Validated Order';
+
+  @override
+  String get completedOrder => 'Completed Order';
+
+  @override
+  String get rejectedOrder => 'Rejected Order';
+
+  @override
+  String get solde => 'balance';
+
+  @override
+  String get mlMy_activity => 'My Activity';
+
+  @override
+  String get mlHistory => 'history';
+
+  @override
+  String get mltotal => 'All';
+
+  @override
+  String get mlinprogress => 'All';
+
+  @override
+  String get mlrefused => 'Refused';
+
+  @override
+  String get mlvalid => 'validated';
+
+  @override
+  String get mlclosed => 'closed';
+
+  @override
+  String get mlNotification => 'Notifications';
+
+  @override
+  String get options => 'Options';
+
+  @override
+  String get darkmode => 'DarkMode';
 }

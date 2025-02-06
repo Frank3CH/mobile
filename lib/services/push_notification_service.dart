@@ -42,7 +42,6 @@ class PushNotificationService {
       await _sendTokenToServer(_currentFCMToken!);
     }
 
-    // Listen for token refresh
     _fcm.onTokenRefresh.listen((newToken) {
       _currentFCMToken = newToken;
       _sendTokenToServer(newToken);

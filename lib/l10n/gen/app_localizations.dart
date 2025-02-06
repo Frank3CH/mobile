@@ -496,6 +496,96 @@ abstract class AppLocalizations {
   /// In fr, this message translates to:
   /// **'Createur de Commande'**
   String get ordercreator;
+
+  /// No description provided for @pendingOrder.
+  ///
+  /// In fr, this message translates to:
+  /// **'Commande en attente'**
+  String get pendingOrder;
+
+  /// No description provided for @validatedOrder.
+  ///
+  /// In fr, this message translates to:
+  /// **'Commande validée'**
+  String get validatedOrder;
+
+  /// No description provided for @completedOrder.
+  ///
+  /// In fr, this message translates to:
+  /// **'Commande terminée'**
+  String get completedOrder;
+
+  /// No description provided for @rejectedOrder.
+  ///
+  /// In fr, this message translates to:
+  /// **'Commande refusée'**
+  String get rejectedOrder;
+
+  /// No description provided for @solde.
+  ///
+  /// In fr, this message translates to:
+  /// **'Solde'**
+  String get solde;
+
+  /// No description provided for @mlMy_activity.
+  ///
+  /// In fr, this message translates to:
+  /// **'Mon Activité'**
+  String get mlMy_activity;
+
+  /// No description provided for @mlHistory.
+  ///
+  /// In fr, this message translates to:
+  /// **'Historique'**
+  String get mlHistory;
+
+  /// No description provided for @mltotal.
+  ///
+  /// In fr, this message translates to:
+  /// **'Toutes'**
+  String get mltotal;
+
+  /// No description provided for @mlinprogress.
+  ///
+  /// In fr, this message translates to:
+  /// **'en cours'**
+  String get mlinprogress;
+
+  /// No description provided for @mlrefused.
+  ///
+  /// In fr, this message translates to:
+  /// **'Refusé'**
+  String get mlrefused;
+
+  /// No description provided for @mlvalid.
+  ///
+  /// In fr, this message translates to:
+  /// **'validé'**
+  String get mlvalid;
+
+  /// No description provided for @mlclosed.
+  ///
+  /// In fr, this message translates to:
+  /// **'Terminé'**
+  String get mlclosed;
+
+  /// No description provided for @mlNotification.
+  ///
+  /// In fr, this message translates to:
+  /// **'Notifications'**
+  String get mlNotification;
+
+  /// No description provided for @options.
+  ///
+  /// In fr, this message translates to:
+  /// **'Options'**
+  String get options;
+
+  /// No description provided for @darkmode.
+  ///
+  /// In fr, this message translates to:
+  /// **'DarkMode'**
+  String get darkmode;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

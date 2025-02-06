@@ -85,7 +85,7 @@ const String? mltotal = 'Toutes';
 const String? mlinprogress = 'En cours';
 const String? mlclosed = 'terminé';
 const String? mlvalid = 'Validé';
-const String? mlrefused = 'Refusé';
+const String? mlrefused = 'Annulé';
 
 const BaseUrl = 'https://assets.iqonic.design/old-themeforest-images/prokit';
 const backUrl = 'https://backend.esmvpharma.mr';

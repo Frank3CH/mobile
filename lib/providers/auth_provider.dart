@@ -41,7 +41,7 @@ class AuthProvider with ChangeNotifier {
       if (rememberMe) {
         await setValue('rememberMe', true);
       }
-      await _pushNotificationService.initialize();
+      //await _pushNotificationService.initialize();
       // Fetch user profile
       await fetchUserProfile();
 
@@ -74,12 +74,11 @@ class AuthProvider with ChangeNotifier {
   }
 
   Future<void> logout(BuildContext context) async {
-    await _pushNotificationService.clearFCMToken();
+    //_pushNotificationService.clearFCMToken();
     await removeKey('token');
     await removeKey('isLoggedIn');
     await removeKey('isAdmin');
     await removeKey('rememberMe');
-    await Future.delayed(Duration.zero);
 
     if (context.mounted) {
       Navigator.pushNamedAndRemoveUntil(context, '/MLLoginScreen', (route) => false);

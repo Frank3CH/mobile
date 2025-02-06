@@ -65,5 +65,20 @@
   "orderref": "Ref order",
   "ordercreator": "Order Creator",
   "accountBalanceDetails": "Account Balance Details",
-  "placeOrder": "Place an Order"
+  "placeOrder": "Place an Order",
+  "pendingOrder": "Pending Order",
+  "validatedOrder": "Validated Order",
+  "completedOrder": "Completed Order",
+  "rejectedOrder": "Rejected Order",
+  "solde" : "balance",
+  "mlMy_activity": "My Activity",
+  "mlHistory" : "history",
+  "mlinprogress" : "All",
+  "mlrefused" : "Refused",
+  "mlvalid" : "validated",
+  "mlclosed" : "closed",
+  "mltotal" : "All",
+  "mlNotification" : "Notifications",
+  "options" : "Options",
+  "darkmode" : "DarkMode"
 }

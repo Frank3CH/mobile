@@ -65,5 +65,21 @@
   "detsoldecomptable" : "Détails Solde comptable",
   "echeance": "Échéance",
   "orderref": "Ref Commande",
-  "ordercreator": "Createur de Commande"
+  "ordercreator": "Createur de Commande",
+  "pendingOrder": "Commande en attente",
+  "validatedOrder": "Commande validée",
+  "completedOrder": "Commande terminée",
+  "rejectedOrder": "Commande refusée",
+  "solde" : "Solde",
+  "mlMy_activity": "Mon Activité",
+  "mlHistory" : "Historique",
+  "mltotal" : "Toutes",
+  "mlinprogress" : "en cours",
+  "mlrefused" : "Refusé",
+  "mlvalid" : "validé",
+  "mlclosed" : "Terminé",
+  "mlNotification" : "Notifications",
+  "options" : "Options",
+  "darkmode" : "DarkMode"
+
 }
