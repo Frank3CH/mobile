@@ -58,9 +58,6 @@ class PushNotificationService {
       final authToken = getStringAsync('token');
       if (authToken.isEmpty) return;
 
-      print('_sendTokenToServer');
-      print(fcmToken);
-
       final dio = Dio();
       final response = await dio.post(
         '$backUrl/api/notification/update-token',

@@ -1,6 +1,8 @@
 import 'package:esmv_store/l10n/gen/app_localizations.dart';
 import 'package:esmv_store/providers/cart_provider.dart';
 import 'package:esmv_store/providers/order_provider.dart';
+import 'package:esmv_store/providers/maintenance_provider.dart';
+import 'package:esmv_store/components/MaintenanceMonitor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:esmv_store/screens/MLSplashScreen.dart';
@@ -15,7 +17,7 @@ import 'package:provider/provider.dart';
 import 'package:esmv_store/providers/auth_provider.dart';
 import 'package:esmv_store/providers/product_provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:upgrader/upgrader.dart'; // Import upgrader package
+import 'package:upgrader/upgrader.dart';
 
 AppStore appStore = AppStore();
 
@@ -58,6 +60,7 @@ class _MyAppState extends State<MyApp> {
         ChangeNotifierProvider(create: (_) => ProductProvider()),
         ChangeNotifierProvider(create: (_) => CartProvider()),
         ChangeNotifierProvider(create: (_) => OrderProvider()),
+        ChangeNotifierProvider(create: (_) => MaintenanceProvider()), // Add this
       ],
       child: Observer(
         builder: (_) => MaterialApp(
@@ -82,11 +85,15 @@ class _MyAppState extends State<MyApp> {
             }
             return supportedLocales.first;
           },
+          builder: (context, child) {
+            // Wrap the entire app with MaintenanceMonitor - uses overlay approach
+            return MaintenanceMonitor(child: child ?? SizedBox());
+          },
           initialRoute: '/MLSplashScreen',
           routes: {
             '/MLSplashScreen': (context) => UpgradeAlert(
               child: MLSplashScreen(),
-              barrierDismissible: false, // Users cannot dismiss the update dialog
+              barrierDismissible: false,
               dialogStyle: UpgradeDialogStyle.material,
               showLater: false,
               showIgnore: false,

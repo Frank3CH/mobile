@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:esmv_store/components/MLDeliveredDataComponent.dart';
 import 'package:esmv_store/utils/MLColors.dart';
-import 'package:esmv_store/utils/MLString.dart';
 import 'package:esmv_store/services/order_service.dart';
 import 'package:esmv_store/model/Commande.dart';
 import 'package:provider/provider.dart';

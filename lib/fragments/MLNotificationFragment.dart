@@ -4,7 +4,6 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:esmv_store/components/MLNotificationComponent.dart';
 import 'package:esmv_store/model/MLNotificationData.dart';
 import 'package:esmv_store/utils/MLColors.dart';
-import 'package:esmv_store/utils/MLString.dart';
 import 'package:esmv_store/main.dart';
 
 class MLNotificationFragment extends StatefulWidget {

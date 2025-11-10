@@ -22,7 +22,6 @@ class MLSearchScreenState extends State<MLSearchScreen> {
   List<Product> data = [];
   List<String?> choice = ['None'];
   bool? selectedIndex = false;
-  int? _value = 1;
 
   static String _displayStringForOption(Product option) => option.name.validate();
 
