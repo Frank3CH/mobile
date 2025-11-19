@@ -3,12 +3,14 @@ import 'package:nb_utils/nb_utils.dart';
 
 class MLMaintenanceScreen extends StatefulWidget {
   final String? message;
+  final String? message2;
   final String? estimatedEndTime;
   final VoidCallback? onRetry;
 
   const MLMaintenanceScreen({
     Key? key,
     this.message,
+    this.message2,
     this.estimatedEndTime,
     this.onRetry,
   }) : super(key: key);
@@ -51,12 +53,12 @@ class _MLMaintenanceScreenState extends State<MLMaintenanceScreen> {
               children: [
                 Icon(
                   Icons.construction_rounded,
-                  size: 100,
+                  size: 75,
                   color: context.primaryColor,
                 ),
                 24.height,
                 Text(
-                  'Under Maintenance',
+                  'Maintenance en cours',
                   style: boldTextStyle(size: 24),
                   textAlign: TextAlign.center,
                 ),
@@ -64,6 +66,13 @@ class _MLMaintenanceScreenState extends State<MLMaintenanceScreen> {
                 Text(
                   widget.message ??
                       'We\'re currently performing maintenance to improve your experience. Please check back soon.',
+                  style: secondaryTextStyle(size: 16),
+                  textAlign: TextAlign.center,
+                ),
+                16.height,
+                Text(
+                  widget.message2 ??
+                      'نحن نقوم حالياً بأعمال صيانة لتحسين تجربتك. يرجى العودة قريباً.',
                   style: secondaryTextStyle(size: 16),
                   textAlign: TextAlign.center,
                 ),
@@ -76,7 +85,7 @@ class _MLMaintenanceScreenState extends State<MLMaintenanceScreen> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
-                      'Expected to be back: ${widget.estimatedEndTime}',
+                      'Prévu pour être de retour le: ${widget.estimatedEndTime}',
                       style: primaryTextStyle(size: 14),
                       textAlign: TextAlign.center,
                     ),
@@ -84,7 +93,7 @@ class _MLMaintenanceScreenState extends State<MLMaintenanceScreen> {
                 ],
                 32.height,
                 AppButton(
-                  text: _isRetrying ? 'Checking...' : 'Check Again',
+                  text: _isRetrying ? 'Verification...' : 'Re-verifiez',
                   onTap: _isRetrying ? null : _handleRetry,
                   color: context.primaryColor,
                   width: context.width() * 0.5,
@@ -101,7 +110,7 @@ class _MLMaintenanceScreenState extends State<MLMaintenanceScreen> {
                 ),
                 16.height,
                 Text(
-                  'We apologize for the inconvenience',
+                  'Nous vous prions de nous excuser pour ce désagrément',
                   style: secondaryTextStyle(size: 12, color: Colors.grey),
                   textAlign: TextAlign.center,
                 ),

@@ -10,12 +10,14 @@ class MaintenanceProvider extends ChangeNotifier {
 
   bool _isUnderMaintenance = false;
   String? _maintenanceMessage;
+  String? _maintenanceMessage2;
   String? _estimatedEndTime;
   Timer? _periodicCheckTimer;
   bool _isChecking = false;
 
   bool get isUnderMaintenance => _isUnderMaintenance;
   String? get maintenanceMessage => _maintenanceMessage;
+  String? get maintenanceMessage2 => _maintenanceMessage2;
   String? get estimatedEndTime => _estimatedEndTime;
 
   /// Start periodic maintenance checks
@@ -53,6 +55,7 @@ class MaintenanceProvider extends ChangeNotifier {
         final wasUnderMaintenance = _isUnderMaintenance;
         _isUnderMaintenance = data['isUnderMaintenance'] ?? false;
         _maintenanceMessage = data['message'];
+        _maintenanceMessage2 = data['message2']??'';
         _estimatedEndTime = data['estimatedEndTime'];
 
         // Only notify if status changed

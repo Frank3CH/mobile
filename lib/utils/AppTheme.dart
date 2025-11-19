@@ -26,7 +26,7 @@ class AppThemeData {
       error: Colors.red,
       secondary: appColorPrimary, // Add other colorScheme properties if needed
     ),
-    cardTheme: CardThemeData(color: Colors.white),
+    cardTheme: CardTheme(color: Colors.white),
     cardColor: Colors.white,
     iconTheme: IconThemeData(color: textPrimaryColor),
     bottomSheetTheme: BottomSheetThemeData(backgroundColor: whiteColor),
@@ -64,7 +64,7 @@ class AppThemeData {
       titleLarge: primaryTextStyle(color: Colors.white), // Replaces headline6
       labelSmall: primaryTextStyle(color: Colors.white), // Replaces overline
     ),
-    cardTheme: CardThemeData(color: cardBackgroundBlackDark),
+    cardTheme: CardTheme(color: cardBackgroundBlackDark),
     cardColor: appSecondaryBackgroundColor,
     iconTheme: IconThemeData(color: whiteColor),
     textTheme: TextTheme(

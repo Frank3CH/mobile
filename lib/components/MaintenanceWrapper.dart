@@ -49,6 +49,7 @@ class _MaintenanceWrapperState extends State<MaintenanceWrapper> with WidgetsBin
         if (maintenanceProvider.isUnderMaintenance) {
           return MLMaintenanceScreen(
             message: maintenanceProvider.maintenanceMessage,
+            message2: maintenanceProvider.maintenanceMessage2,
             estimatedEndTime: maintenanceProvider.estimatedEndTime,
             onRetry: () {
               maintenanceProvider.checkMaintenanceStatus();
