@@ -26,7 +26,7 @@ class AppThemeData {
       error: Colors.red,
       secondary: appColorPrimary, // Add other colorScheme properties if needed
     ),
-    CardThemeData: CardThemeData(color: Colors.white),
+    cardTheme: CardThemeData(color: Colors.white),
     cardColor: Colors.white,
     iconTheme: IconThemeData(color: textPrimaryColor),
     bottomSheetTheme: BottomSheetThemeData(backgroundColor: whiteColor),
