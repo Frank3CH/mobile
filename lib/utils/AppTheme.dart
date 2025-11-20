@@ -64,7 +64,7 @@ class AppThemeData {
       titleLarge: primaryTextStyle(color: Colors.white), // Replaces headline6
       labelSmall: primaryTextStyle(color: Colors.white), // Replaces overline
     ),
-    CardThemeData: CardThemeData(color: cardBackgroundBlackDark),
+    cardTheme: CardThemeData(color: cardBackgroundBlackDark),
     cardColor: appSecondaryBackgroundColor,
     iconTheme: IconThemeData(color: whiteColor),
     textTheme: TextTheme(
