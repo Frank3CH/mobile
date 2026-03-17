@@ -114,7 +114,7 @@ class MLShoppingCartComponentState extends State<MLShoppingCartComponent> {
                                     content: Text(
                                       newQuantity == null
                                           ? AppLocalizations.of(context)!.invalidQuantity
-                                          : AppLocalizations.of(context)!.quantityNotAvailable(item.product.quantity.toString()),
+                                          : AppLocalizations.of(context)!.quantityNotAvailable,
                                       style: TextStyle(color: Colors.white),
                                     ),
                                     backgroundColor: Colors.red,
@@ -139,7 +139,7 @@ class MLShoppingCartComponentState extends State<MLShoppingCartComponent> {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                    AppLocalizations.of(context)!.maxStockReached(item.product.quantity.toString()),
+                                    AppLocalizations.of(context)!.maxStockReached,
                                     style: TextStyle(color: Colors.white),
                                   ),
                                   backgroundColor: Colors.orange,
